@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int sustituir(int nums[], int cantelementos);
+
+int main()
+{
+    int cantelementos,i;
+
+
+    printf("Digite la cantidad de elementos a ingresar: ");
+    scanf("%d",&cantelementos);
+
+    int nums[cantelementos];
+
+    printf("\nDigite los elementos del vector: ");
+    for(i=0;i<cantelementos;i++){
+        printf("\nElemento n%cmero %d: ",163,i+1);
+        scanf("%d",&nums[i]);
+    }
+
+    printf("\nSustituci%cn: ",162);
+    sustituir(nums,cantelementos);
+
+    return 0;
+}
+
+int sustituir(int nums[], int cantelementos)
+{
+    int i,cont=0;
+
+    for(i=0;i<cantelementos;i++){
+        if(nums[i]==nums[i+1]){
+            nums[i]=-5;
+        }
+    }
+//aqui hay un problema con la condicion, no se como hacer siendo un arreglo, se compare un elemento con los demas, en este caso solo se compara el actual con uno mas que el
+
+
+    for(i=0;i<cantelementos;i++){
+        printf("\nElemento n%cmero %d: %d ",163,i+1,nums[i]);
+    }
+
+
+    return nums[i];
+}
+
+
