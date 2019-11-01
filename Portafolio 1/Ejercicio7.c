@@ -1,4 +1,4 @@
-#include <stdio.2h>
+#include <stdio.h>
 #include <stdlib.h>
 
 /*Programar un algoritmo recursivo que permita sumar los elementos de una matriz de enteros.*/
