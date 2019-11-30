@@ -1,19 +1,50 @@
 /*
-1. Cree una funciÛn que reciba un string y retorne el mismo string, pero elimin·ndole la primera oraciÛn.
-Esta funciÛn se debe de realizar sin utilizar memoria RAM extra. Si es la ultima oraciÛn del string, se debe de retornar,
-un string vacÌo.
+1. Cree una funci√≥n que reciba un string y retorne el mismo string, pero elimin√°ndole la primera oraci√≥n.
+Esta funci√≥n se debe de realizar sin utilizar memoria RAM extra. Si es la ultima oraci√≥n del string, se debe de retornar,
+un string vac√≠o.
 Ejemplo 1.1:
-Entrada: Hola como estas? Bien. Hoy comÌ mucho. Nos veremos en un rato
-Salida: Bien. Hoy comÌ mucho. Nos veremos en un rato1.
+Entrada: Hola como estas? Bien. Hoy com√≠ mucho. Nos veremos en un rato
+Salida: Bien. Hoy com√≠ mucho. Nos veremos en un rato1.
 */
 
 #include <stdio.h>
 #include <string.h>
 #define MAX 100
 
+//otro
+
+int main()
+{
+    char string[MAX],copia[MAX];
+    int i=0,j=0,posicion,longitud;
+
+    printf("Ingrese una cadena de texto: ");
+    gets(string);
+
+    printf("\nIngrese la posici%cn desde la cual se va a remover.\n(iniciando desde la posicion 0 del caracter en el arreglo): ",162);
+    scanf("%d",&posicion);
+    printf("Ingrese la longitud de lo que se va a remover: ");
+    scanf("%d",&longitud);
+
+    i=posicion;
+
+    do{
+        copia[j]=string[i];
+        j++;i++;longitud--;
+    }while(string[i]!='\0' && longitud>=0);
+
+    copia[j]='\0';
+    printf("Resultado: %s",copia);
+
+    return 0;
+}
+
+
+
+/*Primer intento:
+
 
 void eliminar(char *string, const char signos);
-
 
 int main()
 {
@@ -22,6 +53,8 @@ int main()
 
     printf("Escribe varias oraciones separadas por:. : ;): ");
     gets(string);
+
+    substr[MAX]=string[MAX];
 
     printf("Ingresa el primer signo despues del cual vas a remover: (. : ;)");
     signos = getchar();
@@ -52,3 +85,4 @@ void eliminar(char *string, const char signos)
         }
     }
 }
+*/
